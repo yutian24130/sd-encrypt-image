@@ -16,7 +16,7 @@ from fastapi import FastAPI, Request, Response
 import sys
 
 repo_dir = md_scripts.basedir()
-password = getattr(shared.cmd_opts, 'Encryption-Password', None)
+password = getattr(shared.cmd_opts, 'encrypt-pass', None)
 
 if PILImage.Image.__name__ != 'EncryptedImage':
     super_open = PILImage.open
